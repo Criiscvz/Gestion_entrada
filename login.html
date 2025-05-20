@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Sistema de Gestión de Ingreso de Vehículos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="uleam.png" alt="Logo ULEAM" class="logo">
+                </div>
+                <div class="header-text">
+                    <h1>Sistema de Gestión de Ingreso de Vehículos</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="login.html" class="active">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-container">
+            <h2>Iniciar Sesión</h2>
+            <div id="login-message" class="message-container"></div>
+            <form id="login-form" novalidate>
+                <div class="form-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <small class="input-help">Formato: usuario@dominio.com</small>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="button" class="btn btn-primary" id="login-button">Iniciar Sesión</button>
+            </form>
+            <div class="register-link">
+                <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+            </div>
+            
+            <div class="demo-users">
+                <h3>Usuarios de demostración:</h3>
+                <ul>
+                    <li><strong>Estudiante:</strong> Cristhianchavez@live.uleam.edu.ec / contraceña123</li>
+                    <li><strong>Profesor:</strong> JoseAlonso@live.uleam.edu.ec / profesor456</li>
+                    <li><strong>Administrador:</strong> admin@live.uleam.edu.ec / admin789</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Gestión de Ingreso de Vehículos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
