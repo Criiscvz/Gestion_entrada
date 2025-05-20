@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - Sistema de Gestión de Ingreso de Vehículos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="uleam.png" alt="Logo ULEAM" class="logo">
+                </div>
+                <div class="header-text">
+                    <h1>Sistema de Gestión de Ingreso de Vehículos</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="admin.html" class="active">Panel de Administrador</a></li>
+                            <li><a href="login.html">Cerrar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="admin-panel">
+            <h2>Panel de Administrador</h2>
+            
+            <div class="search-section">
+                <h3>Buscar Usuarios</h3>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar por nombre o vehículo...">
+                    <button class="btn" onclick="searchUsers()">Buscar</button>
+                </div>
+                <div class="filter-options">
+                    <label>
+                        <input type="radio" name="filter" value="all" checked> Todos
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="estudiante"> Estudiantes
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="profesor"> Profesores
+                    </label>
+                </div>
+            </div>
+            
+            <div class="users-table">
+                <h3>Lista de Usuarios</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Tipo</th>
+                            <th>Vehículos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Cristhian Chavez</td>
+                            <td>Cristhianchavez@live.uleam.edu.ec</td>
+                            <td>Estudiante</td>
+                            <td>Toyota Corolla (ABC-123)</td>
+                            <td>
+                                <button class="btn btn-small">Ver</button>
+                                <button class="btn btn-small btn-warning">Editar</button>
+                                <button class="btn btn-small btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>José Alonso</td>
+                            <td>JoseAlonso@live.uleam.edu.ec</td>
+                            <td>Profesor</td>
+                            <td>Honda Civic (XYZ-789)</td>
+                            <td>
+                                <button class="btn btn-small">Ver</button>
+                                <button class="btn btn-small btn-warning">Editar</button>
+                                <button class="btn btn-small btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Administrador</td>
+                            <td>admin@live.uleam.edu.ec</td>
+                            <td>Administrador</td>
+                            <td>-</td>
+                            <td>
+                                <button class="btn btn-small">Ver</button>
+                                <button class="btn btn-small btn-warning">Editar</button>
+                                <button class="btn btn-small btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pagination">
+                <button class="btn btn-small">&laquo; Anterior</button>
+                <span>Página 1 de 1</span>
+                <button class="btn btn-small">Siguiente &raquo;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sistema de Gestión de Ingreso de Vehículos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
